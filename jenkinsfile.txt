@@ -16,7 +16,6 @@ steps
 echo "Testing the proj.."
 }
 }
-
 stage ('Deploy') 
 {
 steps 
