@@ -2,23 +2,23 @@ pipeline {
 agent any
 stages 
 {
-stage ('Build')
+stage('Build')
 {
 steps 
 {
-echo "Building the proj.."
+echo "Building the code.."
 bat "mvn clean"
 }
 }
-stage ('Test')
+stage('Test')
 {
 steps 
 {
-echo "Testing the proj.."
+echo "Testing the code.."
 bat "mvn test"
 }
 }
-stage ('Compile')
+stage('Compile')
 {
 steps 
 {
@@ -26,12 +26,11 @@ echo "Compiling the proj.."
 bat "mvn compile"
 }
 }
-stage ('Deploy') 
+stage('Deploy') 
 {
 steps 
 {
 echo "Deploying the proj.."
-}
 }
 }
 }
